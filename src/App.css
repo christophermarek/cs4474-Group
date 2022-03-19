@@ -28,3 +28,7 @@
 .sidebysidealbums {
     display: flex;
 }
+
+.selected{
+    color:red;
+}

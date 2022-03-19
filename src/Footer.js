@@ -1,4 +1,4 @@
-export const Footer = () => {
+export const Footer = ( {pageSelected, setPageSelected} ) => {
 
     const home = require('./assets/home.png')
 
@@ -12,7 +12,7 @@ export const Footer = () => {
     return (
         <div className='footer'>
             {footer_items.map((item, index) => 
-                <div className='footer_item'>
+                <div className={'footer_item ' + (pageSelected === item.text ? ('selected') : (''))} onClick={() => setPageSelected(item.text)}>
                     <img src={item.src} />
                     <p>{item.text}</p>
                 </div>
