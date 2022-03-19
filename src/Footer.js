@@ -11,13 +11,19 @@ export const Footer = ({ pageSelected, setPageSelected }) => {
         { text: 'Discover', src: home }
     ]
 
+    const nav_footer = (page) => {
+        if(page !== 'Search'){
+            setPageSelected(page)
+        }
+    }
+
     return (
         <div className='footer'>
             {footer_items.map((item, index) =>
                 <motion.div
                     // whileHover={{ scale: 1.1}} 
                     whileTap={{ scale: 0.8, borderRadius: "100%" }}
-                    className={'footer_item ' + (pageSelected === item.text ? ('selected') : (''))} onClick={() => setPageSelected(item.text)}
+                    className={'footer_item ' + (pageSelected === item.text ? ('selected') : (''))} onClick={() => nav_footer(item.text)}
                 >
                     <img src={item.src} />
                     <p>{item.text}</p>

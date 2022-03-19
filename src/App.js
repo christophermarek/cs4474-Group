@@ -3,6 +3,7 @@ import './App.css';
 import { HomePage } from './HomePage';
 import { Footer } from './Footer';
 import { Discover } from './Discover';
+import { Library } from './Library';
 
 function App() {
 
@@ -18,6 +19,9 @@ function App() {
             }
             {pageSelected === 'Discover' &&
                 <Discover />
+            }
+            {pageSelected === 'Your Library' && 
+                <Library />
             }
             <Footer pageSelected={pageSelected} setPageSelected={setPageSelected}/>
         </div>
