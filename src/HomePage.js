@@ -1,4 +1,9 @@
+import React, { useState } from 'react';
+import { FriendsRecomendations } from './FriendsRecommendations';
+
 export const HomePage = () => {
+
+    const [friendsReccomendations, setFriendsReccomendations] = useState(false);
 
     //import images
     const chill_vibes = require('./assets/chill_vibes.png')
@@ -15,26 +20,41 @@ export const HomePage = () => {
 
     return (
         <>
-            <p>Good Morning</p>
-            <div id='rec_played_grid'>
-                {recently_played.map((item, index) =>
-                    <div key={index} id='recently_played_entry'>
-                        <img src={item.src} alt='recently played' />
-                        <p>{item.name}</p>
-                    </div>
-                )}
-            </div>
+            {friendsReccomendations ?
 
-            <p>Made for you</p>
-            <div className='sidebysidealbums'>
-                <img src={album_pic_large} />
-                <img src={album_pic_large} />
-            </div>
-            <p>Popular Playlist</p>
-            <div className='sidebysidealbums'>
-                <img src={album_pic_large} />
-                <img src={album_pic_large} />
-            </div>
+                (
+                    <FriendsRecomendations setFriendsReccomendations={setFriendsReccomendations}/>
+                )
+                :
+                (
+                    <>
+                        <p>Good Morning</p>
+                        <input type='button' onClick={() => setFriendsReccomendations(true)} value='friends' />
+
+                        <div id='rec_played_grid'>
+                            {recently_played.map((item, index) =>
+                                <div key={index} id='recently_played_entry'>
+                                    <img src={item.src} alt='recently played' />
+                                    <p>{item.name}</p>
+                                </div>
+                            )}
+                        </div>
+
+                        <p>Made for you</p>
+                        <div className='sidebysidealbums'>
+                            <img src={album_pic_large} />
+                            <img src={album_pic_large} />
+                        </div>
+                        <p>Popular Playlist</p>
+                        <div className='sidebysidealbums'>
+                            <img src={album_pic_large} />
+                            <img src={album_pic_large} />
+                        </div>
+                    </>
+
+                )
+            }
+
         </>
     )
 
