@@ -41,29 +41,31 @@ export const HomePage = () => {
                                 </div>
                             )}
                         </div>
+                        <div id='bottomhome'>
+                            <div>
+                                <p className='large'>Made for you</p>
+                                <div className='sidebysidealbums'>
+                                    <div className='albumdivleft'>
+                                        <img src={album_pic_large} />
+                                    </div>
+                                    <div className='albumdivright'>
+                                        <img src={album_pic_large} />
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <p className='large'>Popular Playlist</p>
+                                <div className='sidebysidealbums'>
+                                    <div className='albumdivleft'>
+                                        <img src={album_pic_large} />
+                                    </div>
+                                    <div className='albumdivright'>
+                                        <img src={album_pic_large} />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                        <div>
-                            <p className='large'>Made for you</p>
-                            <div className='sidebysidealbums'>
-                            <div className='albumdivleft'>
-                                    <img src={album_pic_large} />
-                                </div>
-                                <div className='albumdivright'>
-                                    <img src={album_pic_large} />
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p className='large'>Popular Playlist</p>
-                            <div className='sidebysidealbums'>
-                                <div className='albumdivleft'>
-                                    <img src={album_pic_large} />
-                                </div>
-                                <div className='albumdivright'>
-                                    <img src={album_pic_large} />
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                 )

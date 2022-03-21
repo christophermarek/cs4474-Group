@@ -3,7 +3,11 @@
 html {
     min-height: 100%;
     width: 810px;
-    height: 1080px;
+    height: 100vh;
+}
+
+#homepage{
+    height: 100%;
 }
 
 .App {
@@ -32,6 +36,7 @@ html {
     margin: 1%;
     align-items: center;
     border-radius: 15px;
+    width: 95%;
 }
 
 .large{
@@ -41,6 +46,7 @@ html {
 
 .sidebysidealbums {
     display: flex;
+    width: 100%;
 }
 
 .selected{
@@ -64,9 +70,23 @@ html {
 }
 
 .albumdivleft{
-    margin-left: -3%;
-    margin-right: 1%;
+    margin-right: 0;
+    max-width: 100%;
+    margin-right: -1%;
+
 }
 .albumdivright{
-    margin-left: 1%;
+    margin-left: -1%;
+    max-width: 100%;
+
+}
+.albumdivleft img{
+    width: 95%;
+}
+.albumdivright img{
+    width: 95%;
+}
+
+#bottomhome{
+    margin-bottom: 10%;
 }

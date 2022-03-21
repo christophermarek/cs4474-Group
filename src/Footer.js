@@ -2,13 +2,12 @@ import { motion } from "framer-motion";
 
 export const Footer = ({ pageSelected, setPageSelected }) => {
 
-    const home = require('./assets/home.png')
 
     const footer_items = [
-        { text: 'Home', src: home },
-        { text: 'Search', src: home },
-        { text: 'Your Library', src: home },
-        { text: 'Discover', src: home }
+        { text: 'Home', src: require('./assets/home.svg').default },
+        { text: 'Search', src: require('./assets/search.svg').default },
+        { text: 'Your Library', src: require('./assets/library.svg').default },
+        { text: 'Discover', src: require('./assets/discover.svg').default }
     ]
 
     const nav_footer = (page) => {
@@ -25,7 +24,7 @@ export const Footer = ({ pageSelected, setPageSelected }) => {
                     whileTap={{ scale: 0.8, borderRadius: "100%" }}
                     className={'footer_item ' + (pageSelected === item.text ? ('selected') : (''))} onClick={() => nav_footer(item.text)}
                 >
-                    <img src={item.src} />
+                    <img src={item.src} alt={item.text}/>
                     <p>{item.text}</p>
                 </motion.div>
             )}
