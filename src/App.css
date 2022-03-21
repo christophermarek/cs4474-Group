@@ -39,6 +39,10 @@ html {
     width: 95%;
 }
 
+#recently_played_entry img{
+    width: 25%;
+}
+
 .large{
     font-family: 'Gothic A1', sans-serif;
     font-size: 1.5em;
