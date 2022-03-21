@@ -23,34 +23,48 @@ export const HomePage = () => {
             {friendsReccomendations ?
 
                 (
-                    <FriendsRecomendations setFriendsReccomendations={setFriendsReccomendations}/>
+                    <FriendsRecomendations setFriendsReccomendations={setFriendsReccomendations} />
                 )
                 :
                 (
-                    <>
-                        <p>Good Morning</p>
-                        <input type='button' onClick={() => setFriendsReccomendations(true)} value='friends' />
+                    <div id='homepage'>
+                        <div id='top'>
+                            <p>Good Morning</p>
+                            <input type='button' onClick={() => setFriendsReccomendations(true)} value='friends' />
+                        </div>
 
                         <div id='rec_played_grid'>
                             {recently_played.map((item, index) =>
                                 <div key={index} id='recently_played_entry'>
                                     <img src={item.src} alt='recently played' />
-                                    <p>{item.name}</p>
+                                    <p className='rec_played_text'>{item.name}</p>
                                 </div>
                             )}
                         </div>
 
-                        <p>Made for you</p>
-                        <div className='sidebysidealbums'>
-                            <img src={album_pic_large} />
-                            <img src={album_pic_large} />
+                        <div>
+                            <p className='large'>Made for you</p>
+                            <div className='sidebysidealbums'>
+                            <div className='albumdivleft'>
+                                    <img src={album_pic_large} />
+                                </div>
+                                <div className='albumdivright'>
+                                    <img src={album_pic_large} />
+                                </div>
+                            </div>
                         </div>
-                        <p>Popular Playlist</p>
-                        <div className='sidebysidealbums'>
-                            <img src={album_pic_large} />
-                            <img src={album_pic_large} />
+                        <div>
+                            <p className='large'>Popular Playlist</p>
+                            <div className='sidebysidealbums'>
+                                <div className='albumdivleft'>
+                                    <img src={album_pic_large} />
+                                </div>
+                                <div className='albumdivright'>
+                                    <img src={album_pic_large} />
+                                </div>
+                            </div>
                         </div>
-                    </>
+                    </div>
 
                 )
             }

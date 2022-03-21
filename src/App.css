@@ -1,7 +1,14 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
+
+html {
+    min-height: 100%;
     width: 810px;
     height: 1080px;
+}
+
+.App {
     background: conic-gradient(from 182.3deg at 33.11% 13.99%, #000000 -101.25deg, #000000 30deg, #3117D0 101.25deg, #000000 258.75deg, #000000 390deg);
+    background-attachment: fixed;
     color: white;
 }
 
@@ -23,6 +30,13 @@
     background-color: grey;
     color: white;
     margin: 1%;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.large{
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 1.5em;
 }
 
 .sidebysidealbums {
@@ -31,4 +45,28 @@
 
 .selected{
     color:red;
+}
+
+#top{
+    display: flex;
+}
+
+.rec_played_text{
+    margin-left: 5%;
+    font-size: 1.3em;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+#homepage{
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.albumdivleft{
+    margin-left: -3%;
+    margin-right: 1%;
+}
+.albumdivright{
+    margin-left: 1%;
 }
