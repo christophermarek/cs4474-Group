@@ -18,6 +18,12 @@ export const HomePage = () => {
         { name: 'I miss her (not)', src: chill_vibes },
     ]
 
+    const rec_played = require('./assets/rec_viewed.svg').default;
+    const bell = require('./assets/bell.svg').default;
+    const settings = require('./assets/Setting.svg').default;
+    const friends = require('./assets/friends.svg').default;
+
+
     return (
         <>
             {friendsReccomendations ?
@@ -27,47 +33,55 @@ export const HomePage = () => {
                 )
                 :
                 (
-                    <div id='homepage'>
-                        <div id='top'>
-                            <p>Good Morning</p>
-                            <input type='button' onClick={() => setFriendsReccomendations(true)} value='friends' />
-                        </div>
+                    <>
+                        <div id='homepage'>
+                        <div id='background'></div>
 
-                        <div id='rec_played_grid'>
-                            {recently_played.map((item, index) =>
-                                <div key={index} id='recently_played_entry'>
-                                    <img src={item.src} alt='recently played' />
-                                    <p className='rec_played_text'>{item.name}</p>
-                                </div>
-                            )}
-                        </div>
-                        <div id='bottomhome'>
-                            <div>
-                                <p className='large'>Made for you</p>
-                                <div className='sidebysidealbums'>
-                                    <div className='albumdivleft'>
-                                        <img src={album_pic_large} />
+                            <div id='top'>
+                                <p>Good Morning</p>
+                                <img src={rec_played}/>
+                                <img src={bell}/>
+                                <img src={settings}/>
+                                <img src={friends} onClick={() => setFriendsReccomendations(true)}/>
+
+                                {/* <input type='button' onClick={() => setFriendsReccomendations(true)} value='friends' /> */}
+                            </div>
+
+                            <div id='rec_played_grid'>
+                                {recently_played.map((item, index) =>
+                                    <div key={index} id='recently_played_entry'>
+                                        <img src={item.src} alt='recently played' />
+                                        <p className='rec_played_text'>{item.name}</p>
                                     </div>
-                                    <div className='albumdivright'>
-                                        <img src={album_pic_large} />
+                                )}
+                            </div>
+                            <div id='bottomhome'>
+                                <div>
+                                    <p className='large'>Made for you</p>
+                                    <div className='sidebysidealbums'>
+                                        <div className='albumdivleft'>
+                                            <img src={album_pic_large} />
+                                        </div>
+                                        <div className='albumdivright'>
+                                            <img src={album_pic_large} />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p className='large'>Popular Playlist</p>
+                                    <div className='sidebysidealbums'>
+                                        <div className='albumdivleft'>
+                                            <img src={album_pic_large} />
+                                        </div>
+                                        <div className='albumdivright'>
+                                            <img src={album_pic_large} />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div>
-                                <p className='large'>Popular Playlist</p>
-                                <div className='sidebysidealbums'>
-                                    <div className='albumdivleft'>
-                                        <img src={album_pic_large} />
-                                    </div>
-                                    <div className='albumdivright'>
-                                        <img src={album_pic_large} />
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
-
-                    </div>
-
+                    </>
                 )
             }
 
