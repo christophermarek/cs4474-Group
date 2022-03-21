@@ -11,6 +11,7 @@ html {
 }
 
 .App {
+    font-family: 'Gothic A1', sans-serif;
    
     color: white;
 }
@@ -155,4 +156,36 @@ html {
 
 .discover_buttons img{
     margin: 20%;
+}
+
+.library{
+    margin-top: -2%;
+}
+
+.likes{
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+#genres {
+    display: flex;
+    justify-content: space-between;
+}
+
+.genre {
+    border: solid;
+    border-radius: 15px;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: 'Gothic A1', sans-serif;
+
+}
+
+.liked{
+    display: flex;
+    justify-content: space-between;
+}
+
+#leftlikes{
+    display: flex;
 }

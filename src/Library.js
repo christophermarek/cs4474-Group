@@ -17,7 +17,9 @@ export const Library = () => {
 
 
     return (
-        <>
+        <div className='library'>
+                        <div id='background'></div>
+
             <div id='lib_header'>
                 <p>Liked Songs</p>
                 <p>2,338 songs</p>
@@ -36,16 +38,22 @@ export const Library = () => {
             <div className='likes'>
                 {liked.map((item, index) =>
                     <div className='liked'>
+                        <div id='leftlikes'>
                         <img src={item.picture} />
                         <div id='info'>
                             <p>{item.title}</p>
                             <p>{item.description}</p>
                          </div>
+                        </div>
+                        
+                         <div id='rightlikes'>
                          <img src={heart} />
                          <img src={three_dots} />
+                        </div>
+                         
                     </div>
                 )}
             </div>
-        </>
+        </div>
     )
 }
