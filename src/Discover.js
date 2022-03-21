@@ -21,8 +21,8 @@ export const Discover = ( ) => {
 
     return (
         <div className='discover'>
-            <input type='button' value='previous' onClick={counter === 0 ? () => setCounter(gifs.length - 1) : () => setCounter(counter - 1)}/>
-            <input type='button' value='next' onClick={counter === gifs.length - 1 ? () => setCounter(0) : () => setCounter(counter + 1)}/>
+            {/* <input type='button' value='previous' onClick={counter === 0 ? () => setCounter(gifs.length - 1) : () => setCounter(counter - 1)}/>
+            <input type='button' value='next' onClick={counter === gifs.length - 1 ? () => setCounter(0) : () => setCounter(counter + 1)}/> */}
 
             <div className='discover_buttons'>
                 <img src={heart} />
@@ -30,7 +30,7 @@ export const Discover = ( ) => {
                 <img src={three_dots} />
             </div>
 
-            <img src={gifs[counter]}/>
+            <img className='gif' src={gifs[counter]} onClick={counter === gifs.length - 1 ? () => setCounter(0) : () => setCounter(counter + 1)}/>
 
         </div>
     )
