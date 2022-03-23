@@ -13,7 +13,7 @@ export const HomePage = () => {
     { name: "Running from demons", src: chill_vibes },
     { name: "Fance in Pillow", src: chill_vibes },
     { name: "Welcome to Chillies", src: chill_vibes },
-    { name: "Dubsep Yo Mama", src: chill_vibes },
+    { name: "Dubstep Yo Mama", src: chill_vibes },
     { name: "I miss her (not)", src: chill_vibes },
   ];
 

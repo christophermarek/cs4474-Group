@@ -26,6 +26,14 @@ html {
   scrollbar-width: none; /* Firefox */
 }
 
+.recommendations {
+  height: 85%;
+}
+
+.friends-container {
+  padding-bottom: 25%;
+}
+
 .library::-webkit-scrollbar {
   display: none;
   /* Chrome */
@@ -124,9 +132,9 @@ html {
 
 .large {
   font-family: "Rubik", sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  margin: 20px 0 10px 2%;
+  font-weight: 400;
+  font-size: 20px;
+  margin: 10px 0 5px 2%;
 }
 
 .sidebysidealbums {
@@ -429,20 +437,96 @@ html {
 
 .friend {
   display: flex;
-  background-color: #000000;
+  width: 100%;
 }
 
-.friend img {
-  height: 50px;
-  margin: 10px;
+.avatar {
+  height: 40px;
+  width: 40px;
+  margin: 0 10px 0 20px;
   position: relative;
   top: 20%;
+  border-radius: 50%;
+}
+
+.friend-thumb {
+  height: 40px;
+  width: 40px;
 }
 
 .friend_listening {
   padding: 0 5% 5% 10%;
+  flex-grow: 2;
 }
 
-.friend_title {
-  margin: 0;
+.friend-title {
+  margin: 0 0 5px 0;
+  font-weight: 400;
+}
+
+.friend-artist {
+  margin: 0 0 5px 0;
+  font-size: 10px;
+}
+
+.friend-artist svg {
+  margin: 0 5px 0 0;
+}
+
+.friend-header {
+  padding: 5%;
+}
+
+.icon-div {
+  display: flex;
+}
+
+.icon-div svg {
+  margin: 0 5px 0 0;
+}
+
+.icon-div p {
+  margin: 3px 0 0 0;
+}
+
+.expandBtn svg {
+  height: 24px;
+  width: 24px;
+  color: #b3b3b3;
+  cursor: pointer;
+}
+
+.friend_stats {
+  font-size: 10px;
+  margin: 17px 5% 0 0;
+  float: right;
+  display: flex;
+}
+
+.friend_stats p {
+  margin: 7px 5px 0 0;
+}
+
+.friend_stats svg {
+  margin: 0 5px 0 5px;
+}
+
+.reccomended_item {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.options {
+  width: 20px;
+}
+
+.recommend-thumb {
+  height: 40px;
+  width: 40px;
+  margin: 0 5px 0 0;
+}
+
+.recommend-body {
+  display: flex;
 }
