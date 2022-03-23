@@ -1,31 +1,17 @@
-import React, { useState } from 'react';
-import './App.css';
-import { HomePage } from './HomePage';
-import { Footer } from './Footer';
-import { Discover } from './Discover';
-import { Library } from './Library';
+import React, { useState } from "react";
+import "./App.css";
+
+import SpotifyContainer from "./components/SpotifyContainer";
+import PhoneContainer from "./components/PhoneContainer";
 
 function App() {
-
-    const [pageSelected, setPageSelected] = useState('Home');
-
-
-    return (
-
-
-        <div className="App">
-            {pageSelected === 'Home' &&
-                <HomePage />
-            }
-            {pageSelected === 'Discover' &&
-                <Discover />
-            }
-            {pageSelected === 'Your Library' && 
-                <Library />
-            }
-            <Footer pageSelected={pageSelected} setPageSelected={setPageSelected}/>
-        </div>
-    );
+  return (
+    <div className="App">
+      <PhoneContainer>
+        <SpotifyContainer />
+      </PhoneContainer>
+    </div>
+  );
 }
 
 export default App;
