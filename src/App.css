@@ -34,6 +34,10 @@ html {
   padding-bottom: 25%;
 }
 
+.swiper {
+  height: 100%;
+}
+
 .library::-webkit-scrollbar {
   display: none;
   /* Chrome */
@@ -408,6 +412,7 @@ html {
 }
 
 .discover_body {
+  z-index: 10;
   position: absolute;
   display: flex;
   height: 150px;
@@ -433,6 +438,10 @@ html {
   position: absolute;
   margin-bottom: 20px;
   margin-right: 5%;
+}
+
+.discover_buttons img {
+  margin-bottom: 10px;
 }
 
 .friend {
