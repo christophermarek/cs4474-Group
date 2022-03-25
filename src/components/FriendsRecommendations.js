@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 export const FriendsRecomendations = ({ setFriendsReccomendations }) => {
+  const [friendIndex, setFriendIndex] = useState();
+
   const [friends, setFriends] = useState([
     {
       expanded: false,
@@ -85,6 +87,7 @@ export const FriendsRecomendations = ({ setFriendsReccomendations }) => {
   const three_dots = require("../assets/3dots.svg").default;
 
   const expandFriend = (index) => {
+    setFriendIndex(index);
     let friends_copy = [...friends];
     friends_copy[index].expanded = !friends_copy[index].expanded;
     setFriends(friends_copy);
