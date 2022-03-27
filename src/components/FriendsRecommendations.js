@@ -105,7 +105,6 @@ export const FriendsRecomendations = ({ currModal, setCurrModal, setFriendsRecco
         <>
             {currModal === 'options' && selSongInfo &&
                 <>
-                    {console.log('open')}
                     <Options setCurrModal={setCurrModal} album_picture={selSongInfo.pic} song_name={selSongInfo.name} song_info={selSongInfo.info} />
                 </>
             }

@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { Heart } from "../Heart";
 
 export const Options = ({ album_picture, song_name, song_info, setCurrModal }) => {
+    const [selected, setSelected] = useState(false);
+    const heart_filled = require("../../assets/heart_filled.svg").default;
 
     const options_select = [
         { icon: require('../../assets/heart.svg').default, text: 'Liked' },
@@ -25,10 +27,10 @@ export const Options = ({ album_picture, song_name, song_info, setCurrModal }) =
                     <>
                         {option.text === 'Liked' ?
                             (
-                                <>
-                                    <Heart className={"option"}/>
+                                <motion.div whileTap={{ scale: 0.95 }} className="option">
+                                    <img onClick={() => setSelected(!selected)} alt="heart thumb" src={selected === false ? (option.icon) : (heart_filled)} />
                                     <p>{option.text}</p>
-                                </>
+                                </motion.div>
                             )
                             :
                             (

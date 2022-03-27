@@ -415,7 +415,9 @@ html {
     padding: 10px;
 }
 
-
+#heartdiv{
+    display: flex;
+}
 
 .icon-heart {
     height: 25px;

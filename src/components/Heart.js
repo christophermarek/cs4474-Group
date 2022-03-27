@@ -7,7 +7,7 @@ export const Heart = ({className}) => {
     const heart_filled = require("../assets/heart_filled.svg").default;
 
     return (
-        <motion.div className={className} whileTap={{ scale: 0.8 }} onClick={() => setSelected(!selected)}>
+        <motion.div whileTap={{ scale: 0.8 }} onClick={() => setSelected(!selected)}>
             <img className={className} alt="heart thumb" src={selected === true ? (heart_filled) : (heart)} />
         </motion.div>
     )
