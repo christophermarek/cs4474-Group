@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Options } from "./modals/Options";
 import { motion } from "framer-motion";
+import { Heart } from "./Heart";
 
 export const Library = ({currModal, setCurrModal}) => {
     // This is bad code but i am rushing separate into a hook after or something
@@ -45,7 +46,7 @@ export const Library = ({currModal, setCurrModal}) => {
             description: "Sebastien Godbout",
         },
     ];
-    const heart = require("../assets/heart.svg").default;
+
     const three_dots = require("../assets/3dots.svg").default;
 
     return (
@@ -206,9 +207,7 @@ export const Library = ({currModal, setCurrModal}) => {
                         </div>
 
                         <div className="likes-icons">
-                            <motion.div whileTap={{ scale: 0.8 }} className="likes-icon">
-                                <img className="icon-heart" alt="heart thumb" src={heart} />
-                            </motion.div>
+                            <Heart className={"icon-heart"}/>
                             <motion.div whileTap={{ scale: 0.8 }} className="likes-icon">
                                 <img className="icon-dots" alt="ellispse" src={three_dots} onClick={() => options_modal(item)}/>
                             </motion.div>

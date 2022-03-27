@@ -4,6 +4,7 @@ import { Share } from "./modals/Share";
 import { motion } from "framer-motion";
 
 import Swipe from "./Swipe";
+import { Heart } from "./Heart";
 
 export const Discover = ({currModal, setCurrModal}) => {
     // This is bad code but i am rushing separate into a hook after or something
@@ -77,9 +78,7 @@ export const Discover = ({currModal, setCurrModal}) => {
                         <p className="discover_artist">{artists[index]}</p>
                     </div>
                     <div className="discover_buttons">
-                        <motion.div whileTap={{ scale: 0.6 }} >
-                            <img alt="discover icon" src={heart} />
-                        </motion.div>
+                        <Heart />
                         <motion.div whileTap={{ scale: 0.6 }} >
                             <img alt="discover icon" src={share} onClick={() => share_modal()} />
                         </motion.div>
