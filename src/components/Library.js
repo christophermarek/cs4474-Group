@@ -50,6 +50,10 @@ export const Library = () => {
     const three_dots = require("../assets/3dots.svg").default;
 
     return (
+        <>
+        {currModal === 'options' && selSongInfo &&
+                    <Options setCurrModal={setCurrModal} album_picture={selSongInfo.pic} song_name={selSongInfo.name} song_info={selSongInfo.info}/>
+        }
         <div className="library">
             <div id="background"></div>
 
@@ -188,9 +192,7 @@ export const Library = () => {
             </div>
 
             <div className="likes">
-                {currModal === 'options' && selSongInfo &&
-                    <Options setCurrModal={setCurrModal} album_picture={selSongInfo.pic} song_name={selSongInfo.name} song_info={selSongInfo.info}/>
-                }
+                
                 {liked.map((item, index) => (
                     <div className="liked">
                         <div className="song-info">
@@ -216,5 +218,6 @@ export const Library = () => {
                 ))}
             </div>
         </div>
+        </>
     );
 };
