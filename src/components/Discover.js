@@ -5,9 +5,8 @@ import { motion } from "framer-motion";
 
 import Swipe from "./Swipe";
 
-export const Discover = () => {
+export const Discover = ({currModal, setCurrModal}) => {
     // This is bad code but i am rushing separate into a hook after or something
-    const [currModal, setCurrModal] = useState('');
     const [selSongInfo, setSelSongInfo] = useState(undefined);
     // diff implementation than in Library and Friends page
     const options_modal = (song) => {
@@ -67,7 +66,7 @@ export const Discover = () => {
             {currModal === 'share' && selSongInfo &&
                 <Share setCurrModal={setCurrModal} album_picture={selSongInfo.pic} song_name={selSongInfo.name} song_info={selSongInfo.info} />
             }
-            <div className="discover">
+            <div className={"discover " +  (currModal !== '' ? 'blur' : '')}>
 
 
                 {/* can just pass up the gif src instead of rewriting this or copy gifs and redo here*/}

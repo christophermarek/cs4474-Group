@@ -12,14 +12,10 @@ const SpotifyContainer = () => {
 
     return (
         <div className="spotify-container">
-            {
-                currModal === 'options' &&
-                <Options />
-            }
-            {pageSelected === "Home" && <HomePage setCurrModal={setCurrModal}/>}
-            {pageSelected === "Discover" && <Discover setCurrModal={setCurrModal}/>}
-            {pageSelected === "Your Library" && <Library setCurrModal={setCurrModal}/>}
-            <Footer pageSelected={pageSelected} setPageSelected={setPageSelected} />
+            {pageSelected === "Home" && <HomePage currModal={currModal} setCurrModal={setCurrModal}/>}
+            {pageSelected === "Discover" && <Discover currModal={currModal} setCurrModal={setCurrModal}/>}
+            {pageSelected === "Your Library" && <Library currModal={currModal} setCurrModal={setCurrModal}/>}
+            <Footer currModal={currModal} pageSelected={pageSelected} setPageSelected={setPageSelected} />
         </div>
     );
 };

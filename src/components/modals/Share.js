@@ -70,10 +70,10 @@ export const Share = ({ album_picture, song_name, song_info, setCurrModal }) => 
             <div className="share_buttons">
                 <ShareButtons />
             </div>
-            <motion.div whileTap={{ scale: 0.99 }} className='center'>
+            <motion.div whileTap={{ scale: 0.8 }} className='center'>
                 <input type='button' value="Share" className="sharebutton" />
             </motion.div>
-            <motion.div whileTap={{ scale: 0.99 }} className='center'>
+            <motion.div whileTap={{ scale: 0.8 }} className='center'>
                 <p id='options_close' onClick={() => setCurrModal('')}>Close</p>
             </motion.div>
         </div>

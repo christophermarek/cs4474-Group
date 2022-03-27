@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FriendsRecomendations } from "./FriendsRecommendations";
 import { motion } from "framer-motion";
 
-export const HomePage = ({ setCurrModal }) => {
+export const HomePage = ({ currModal, setCurrModal }) => {
     const [friendsReccomendations, setFriendsReccomendations] = useState(false);
 
     //import images
@@ -27,11 +27,12 @@ export const HomePage = ({ setCurrModal }) => {
         <>
             {friendsReccomendations ? (
                 <FriendsRecomendations
+                    currModal={currModal} setCurrModal={setCurrModal}
                     setFriendsReccomendations={setFriendsReccomendations}
                 />
             ) : (
                 <>
-                    <div className="homepage" id="homepage">
+                    <div className={"homepage "  + (currModal!== '' ? 'blur' : '')} id="homepage">
                         <div id="background"></div>
 
                         <div id="top">
@@ -72,7 +73,7 @@ export const HomePage = ({ setCurrModal }) => {
 
                         <div id="rec_played_grid">
                             {recently_played.map((item, index) => (
-                                <motion.div whileTap={{ scale: 0.95}} key={index} id="recently_played_entry">
+                                <motion.div whileTap={{ scale: 0.95 }} key={index} id="recently_played_entry">
                                     <img
                                         className="img-thumb"
                                         src={item.src}
@@ -86,10 +87,10 @@ export const HomePage = ({ setCurrModal }) => {
                             <div>
                                 <p className="large">Made for you</p>
                                 <div className="sidebysidealbums">
-                                    <motion.div whileTap={{ scale: 0.95}} className="albumdivleft">
+                                    <motion.div whileTap={{ scale: 0.95 }} className="albumdivleft">
                                         <img alt="album thumb" src={album_pic_large} />
                                     </motion.div>
-                                    <motion.div whileTap={{ scale: 0.95}} className="albumdivright">
+                                    <motion.div whileTap={{ scale: 0.95 }} className="albumdivright">
                                         <img alt="album thumb" src={album_pic_large} />
                                     </motion.div>
                                 </div>
@@ -97,10 +98,10 @@ export const HomePage = ({ setCurrModal }) => {
                             <div>
                                 <p className="large">Popular Playlist</p>
                                 <div className="sidebysidealbums">
-                                    <motion.div whileTap={{ scale: 0.95}} className="albumdivleft">
+                                    <motion.div whileTap={{ scale: 0.95 }} className="albumdivleft">
                                         <img alt="album thumb" src={album_pic_large} />
                                     </motion.div>
-                                    <motion.div whileTap={{ scale: 0.95}} className="albumdivright">
+                                    <motion.div whileTap={{ scale: 0.95 }} className="albumdivright">
                                         <img alt="album thumb" src={album_pic_large} />
                                     </motion.div>
                                 </div>

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export const Footer = ({ pageSelected, setPageSelected }) => {
+export const Footer = ({ currModal, pageSelected, setPageSelected }) => {
     // UNUSED HAVE TO INLINE THE SVGS
     const footer_items = [
         { text: "Home", src: require("../assets/home.svg").default },
@@ -16,7 +16,7 @@ export const Footer = ({ pageSelected, setPageSelected }) => {
     };
 
     return (
-        <div className="footer">
+        <div className={"footer " + (currModal!== '' ? 'blur' : '')}>
             {/* {footer_items.map((item, index) => */}
             <motion.div
                 // whileHover={{ scale: 1.1}}

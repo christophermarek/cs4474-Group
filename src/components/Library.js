@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { Options } from "./modals/Options";
 import { motion } from "framer-motion";
 
-export const Library = () => {
+export const Library = ({currModal, setCurrModal}) => {
     // This is bad code but i am rushing separate into a hook after or something
-    const [currModal, setCurrModal] = useState('');
     const [selSongInfo, setSelSongInfo] = useState(undefined);
 
     const options_modal = (song) => {
@@ -54,7 +53,7 @@ export const Library = () => {
         {currModal === 'options' && selSongInfo &&
                     <Options setCurrModal={setCurrModal} album_picture={selSongInfo.pic} song_name={selSongInfo.name} song_info={selSongInfo.info}/>
         }
-        <div className="library">
+        <div className={"library " + (currModal!== '' ? 'blur' : '')}>
             <div id="background"></div>
 
             <div className="lib_header">

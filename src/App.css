@@ -554,7 +554,7 @@ html {
 
 /* modals */
 .options {
-    background-color: rgba(99, 99, 99, 0.5);
+    background-color: rgba(99, 99, 99, 0.7);
     height: inherit;
     position: absolute;
     width: 90%;
@@ -573,10 +573,13 @@ html {
     margin-left: 25%;
     margin-right: 25%;
     margin-top: 10%;
+    
 }
 
 .options_top p {
     margin: 0;
+    margin-top: 3%;
+    font-weight: 550;
 }
 
 .options_top img {
@@ -586,7 +589,7 @@ html {
 .options_sel {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    margin-left: 5%;
+    margin-left: 10%;
     margin-right: 5%;
     font-size: 1.2em;
 }
@@ -696,4 +699,8 @@ html {
     height: 50%;
     width: 20%;
     filter: invert(100%) hue-rotate(90deg) brightness(1);
+}
+
+.blur{
+    filter: blur(6px);
 }
