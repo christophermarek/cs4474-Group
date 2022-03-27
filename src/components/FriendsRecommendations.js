@@ -7,6 +7,7 @@ export const FriendsRecomendations = ({ setFriendsReccomendations }) => {
     const [selSongInfo, setSelSongInfo] = useState(undefined);
 
     const options_modal = (song) => {
+        console.log('called')
         setCurrModal('options')
         setSelSongInfo({ pic: song.picture, name: song.title, info: song.description })
     }
@@ -101,11 +102,16 @@ export const FriendsRecomendations = ({ setFriendsReccomendations }) => {
     };
 
     return (
-        <div className="recommendations">
+        <div className={"recommendations"} >
             <div id="background"></div>
+            {currModal === 'options' && selSongInfo &&
+            <>
+                {console.log('open')}
+                <Options setCurrModal={setCurrModal} album_picture={selSongInfo.pic} song_name={selSongInfo.name} song_info={selSongInfo.info} />
+                </>
+            }
 
-
-            <div className="friend-header lib-greeting">
+            <div className={"friend-header lib-greeting "}>
                 <a href="#back" onClick={() => setFriendsReccomendations(false)}>
                     <svg
                         width="11px"
@@ -151,9 +157,6 @@ export const FriendsRecomendations = ({ setFriendsReccomendations }) => {
                 <p>Friend's Recommendations</p>
             </div>
             <div className="friends-container">
-                {currModal === 'options' && selSongInfo &&
-                    <Options setCurrModal={setCurrModal} album_picture={selSongInfo.pic} song_name={selSongInfo.name} song_info={selSongInfo.info} />
-                }
                 {friends.map((item, index) => (
                     <div className="friend">
                         <div className="friend-thumb">
@@ -207,8 +210,8 @@ export const FriendsRecomendations = ({ setFriendsReccomendations }) => {
                                                         {rec.description}
                                                     </p>
                                                 </div>
-                                                <div className="options" onClick={() => options_modal(rec)}>
-                                                    <img className="icon-dots" alt="ellispse" src={three_dots}  />
+                                                <div className="options_btn" onClick={() => options_modal(rec)}>
+                                                    <img className="icon-dots" alt="ellispse" src={three_dots} />
                                                 </div>
                                             </div>
                                         </div>

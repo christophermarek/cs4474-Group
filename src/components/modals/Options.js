@@ -3,12 +3,12 @@ import React, { useState } from "react";
 export const Options = ({album_picture, song_name, song_info, setCurrModal}) => {
     
     const options_select = [
-        {icon: '../../assets/heart.svg', text: 'Liked'},
-        {icon: '../../assets/heart.svg', text: 'Add to Playlist'},
-        {icon: '../../assets/heart.svg', text: 'Add to queue'},
-        {icon: '../../assets/heart.svg', text: 'Share'},
-        {icon: '../../assets/heart.svg', text: 'Go to radio'},
-        {icon: '../../assets/heart.svg', text: 'View album'},
+        {icon: require('../../assets/heart.svg').default, text: 'Liked'},
+        {icon: require('../../assets/heart.svg').default, text: 'Add to Playlist'},
+        {icon: require('../../assets/heart.svg').default, text: 'Add to queue'},
+        {icon: require('../../assets/heart.svg').default, text: 'Share'},
+        {icon: require('../../assets/heart.svg').default, text: 'Go to radio'},
+        {icon: require('../../assets/heart.svg').default, text: 'View album'},
     ]
 
     return (
