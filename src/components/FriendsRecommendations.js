@@ -115,8 +115,7 @@ export const FriendsRecomendations = ({ setFriendsReccomendations }) => {
 
 
                 <div className={"friend-header lib-greeting "}>
-                    <motion.div whileTap={{ scale: 0.8 }} >
-                        <a href="#back" onClick={() => setFriendsReccomendations(false)}>
+                    <motion.div onClick={() => setFriendsReccomendations(false)} whileTap={{ scale: 0.9 }} >
                             <svg
                                 width="11px"
                                 height="20px"
@@ -157,7 +156,6 @@ export const FriendsRecomendations = ({ setFriendsReccomendations }) => {
                                     </g>
                                 </g>
                             </svg>
-                        </a>
                     </motion.div>
 
                     <p>Friend's Recommendations</p>

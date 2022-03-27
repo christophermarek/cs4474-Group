@@ -5,11 +5,11 @@ export const Options = ({album_picture, song_name, song_info, setCurrModal}) => 
     
     const options_select = [
         {icon: require('../../assets/heart.svg').default, text: 'Liked'},
-        {icon: require('../../assets/heart.svg').default, text: 'Add to Playlist'},
-        {icon: require('../../assets/heart.svg').default, text: 'Add to queue'},
-        {icon: require('../../assets/heart.svg').default, text: 'Share'},
-        {icon: require('../../assets/heart.svg').default, text: 'Go to radio'},
-        {icon: require('../../assets/heart.svg').default, text: 'View album'},
+        {icon: require('../../assets/options_buttons/playlist.svg').default, text: 'Add to Playlist'},
+        {icon: require('../../assets/options_buttons/queue.svg').default, text: 'Add to queue'},
+        {icon: require('../../assets/options_buttons/share.svg').default, text: 'Share'},
+        {icon: require('../../assets/options_buttons/radio.svg').default, text: 'Go to radio'},
+        {icon: require('../../assets/options_buttons/album.svg').default, text: 'View album'},
     ]
 
     return (
@@ -21,7 +21,7 @@ export const Options = ({album_picture, song_name, song_info, setCurrModal}) => 
             </div>
             <div className="options_sel">
                 {options_select.map((option) => 
-                    <motion.div whileTap={{ scale: 0.99 }} className="option">
+                    <motion.div whileTap={{ scale: 0.95 }} className="option">
                         <img src={option.icon} alt='icon' />
                         <p>{option.text}</p>
                     </motion.div>

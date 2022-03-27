@@ -2,22 +2,22 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const share_select = [
-    { icon: require('../../assets/heart.svg').default, text: 'Hugh Campbell' },
-    { icon: require('../../assets/heart.svg').default, text: 'Kait Bananana' },
-    { icon: require('../../assets/heart.svg').default, text: 'Yerma Willdo' },
-    { icon: require('../../assets/heart.svg').default, text: 'Gabe Barr' },
-    { icon: require('../../assets/heart.svg').default, text: 'Raymond Bann' },
+    { icon: require('../../assets/share_profiles/pp1.png'), text: 'Hugh Campbell' },
+    { icon: require('../../assets/share_profiles/pp2.png'), text: 'Kait Bananana' },
+    { icon: require('../../assets/share_profiles/pp3.png'), text: 'Yerma Willdo' },
+    { icon: require('../../assets/share_profiles/pp4.png'), text: 'Gabe Barr' },
+    { icon: require('../../assets/share_profiles/pp5.png'), text: 'Raymond Bann' },
 ]
 
 const share_buttons = [
-    { icon: require('../../assets/heart.svg').default, text: 'Copy Link' },
-    { icon: require('../../assets/heart.svg').default, text: 'Snapchat' },
-    { icon: require('../../assets/heart.svg').default, text: 'Messages' },
-    { icon: require('../../assets/heart.svg').default, text: 'Instagram' },
-    { icon: require('../../assets/heart.svg').default, text: 'Facebook' },
-    { icon: require('../../assets/heart.svg').default, text: 'WhatsApp' },
-    { icon: require('../../assets/heart.svg').default, text: 'Twitter' },
-    { icon: require('../../assets/heart.svg').default, text: 'More' },
+    { icon: require('../../assets/share_buttons/copy.svg').default, text: 'Copy Link' },
+    { icon: require('../../assets/share_buttons/snap.svg').default, text: 'Snapchat' },
+    { icon: require('../../assets/share_buttons/messages.svg').default, text: 'Messages' },
+    { icon: require('../../assets/share_buttons/instagram.svg').default, text: 'Instagram' },
+    { icon: require('../../assets/share_buttons/facebook.svg').default, text: 'Facebook' },
+    { icon: require('../../assets/share_buttons/whatsapp.svg').default, text: 'WhatsApp' },
+    { icon: require('../../assets/share_buttons/twitter.svg').default, text: 'Twitter' },
+    { icon: require('../../assets/share_buttons/more.svg').default, text: 'More' },
 
 ]
 
@@ -29,7 +29,7 @@ const Select = ({ pic, name, }) => {
                 <p>{name}</p>
             </div>
 
-            <input type='checkbox' />
+            <input className="share_check" type='checkbox' />
 
         </div>
     )
@@ -70,10 +70,10 @@ export const Share = ({ album_picture, song_name, song_info, setCurrModal }) => 
             <div className="share_buttons">
                 <ShareButtons />
             </div>
-            <motion.div whileTap={{ scale: 0.99 }}>
+            <motion.div whileTap={{ scale: 0.99 }} className='center'>
                 <input type='button' value="Share" className="sharebutton" />
             </motion.div>
-            <motion.div whileTap={{ scale: 0.99 }}>
+            <motion.div whileTap={{ scale: 0.99 }} className='center'>
                 <p id='options_close' onClick={() => setCurrModal('')}>Close</p>
             </motion.div>
         </div>
