@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Options } from "./modals/Options";
+import { motion } from "framer-motion";
 
 export const Library = () => {
     // This is bad code but i am rushing separate into a hook after or something
@@ -56,6 +57,8 @@ export const Library = () => {
                 <div className="like-top">
                     <div className="words">
                         <div className="lib-greeting">
+                            <motion.div whileTap={{ scale: 0.95 }} >
+
                             <svg
                                 width="11px"
                                 height="20px"
@@ -99,6 +102,8 @@ export const Library = () => {
                                     </g>
                                 </g>
                             </svg>
+                            </motion.div>
+
                             <p>Liked Songs</p>
                         </div>
                         <p className="lib-sub">2,338 songs</p>
@@ -119,7 +124,7 @@ export const Library = () => {
                             </svg>
                         </span>
                     </div>
-                    <div className="play-button">
+                    <motion.div whileTap={{ scale: 0.95 }}  className="play-button">
                         <span className="btn-play">
                             <svg
                                 width="20px"
@@ -164,7 +169,7 @@ export const Library = () => {
                                 </g>
                             </svg>
                         </span>
-                    </div>
+                    </motion.div>
                 </div>
                 <div id="genres">
                     {genres.map((item, index) => (
@@ -174,9 +179,9 @@ export const Library = () => {
             </div>
 
             <div className="add_song">
-                <div className="add">
+                <motion.div whileTap={{ scale: 0.8 }}  className="add">
                     <p>+</p>
-                </div>
+                </motion.div>
                 <div className="add_text">
                     <p>Add Songs</p>
                 </div>
@@ -189,9 +194,9 @@ export const Library = () => {
                 {liked.map((item, index) => (
                     <div className="liked">
                         <div className="song-info">
-                            <div className="song-thumb">
+                            <motion.div whileTap={{ scale: 0.8 }} className="song-thumb">
                                 <img alt="song thumb" src={item.picture} />
-                            </div>
+                            </motion.div>
 
                             <div className="song-desc">
                                 <p className="song-title">{item.title}</p>
@@ -200,12 +205,12 @@ export const Library = () => {
                         </div>
 
                         <div className="likes-icons">
-                            <div className="likes-icon">
+                            <motion.div whileTap={{ scale: 0.8 }} className="likes-icon">
                                 <img className="icon-heart" alt="heart thumb" src={heart} />
-                            </div>
-                            <div className="likes-icon">
+                            </motion.div>
+                            <motion.div whileTap={{ scale: 0.8 }} className="likes-icon">
                                 <img className="icon-dots" alt="ellispse" src={three_dots} onClick={() => options_modal(item)}/>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 ))}

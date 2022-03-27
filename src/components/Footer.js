@@ -84,7 +84,6 @@ export const Footer = ({ pageSelected, setPageSelected }) => {
             </motion.div>
 
             <motion.div
-                // whileHover={{ scale: 1.1}}
                 whileTap={{ scale: 0.8, borderRadius: "100%" }}
                 className={"footer_item"}
                 onClick={() => nav_footer("Discover")}

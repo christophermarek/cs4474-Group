@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { FriendsRecomendations } from "./FriendsRecommendations";
+import { motion } from "framer-motion";
 
-export const HomePage = ({setCurrModal}) => {
+export const HomePage = ({ setCurrModal }) => {
     const [friendsReccomendations, setFriendsReccomendations] = useState(false);
 
     //import images
@@ -39,14 +40,31 @@ export const HomePage = ({setCurrModal}) => {
                             </div>
 
                             <div className="top-icons">
-                                <img alt="recently played" src={rec_played} />
-                                <img alt="bell" src={bell} />
-                                <img alt="settings" src={settings} />
-                                <img
-                                    alt="friends"
-                                    src={friends}
-                                    onClick={() => setFriendsReccomendations(true)}
-                                />
+                                <motion.div
+                                    whileTap={{ scale: 0.8, borderRadius: "100%" }}
+                                >
+                                    <img alt="recently played" src={rec_played} />
+                                </motion.div>
+                                <motion.div
+                                    whileTap={{ scale: 0.8, borderRadius: "100%" }}
+                                >
+                                    <img alt="bell" src={bell} />
+                                </motion.div>
+                                <motion.div
+                                    whileTap={{ scale: 0.8, borderRadius: "100%" }}
+                                >
+                                    <img alt="settings" src={settings} />
+                                </motion.div>
+                                <motion.div
+                                    whileTap={{ scale: 0.8, borderRadius: "100%" }}
+                                >
+                                    <img
+                                        alt="friends"
+                                        src={friends}
+                                        onClick={() => setFriendsReccomendations(true)}
+                                    />
+                                </motion.div>
+
                             </div>
 
                             {/* <input type='button' onClick={() => setFriendsReccomendations(true)} value='friends' /> */}
@@ -54,37 +72,37 @@ export const HomePage = ({setCurrModal}) => {
 
                         <div id="rec_played_grid">
                             {recently_played.map((item, index) => (
-                                <div key={index} id="recently_played_entry">
+                                <motion.div whileTap={{ scale: 0.95}} key={index} id="recently_played_entry">
                                     <img
                                         className="img-thumb"
                                         src={item.src}
                                         alt="recently played"
                                     />
                                     <p className="rec_played_text">{item.name}</p>
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
                         <div id="bottomhome">
                             <div>
                                 <p className="large">Made for you</p>
                                 <div className="sidebysidealbums">
-                                    <div className="albumdivleft">
+                                    <motion.div whileTap={{ scale: 0.95}} className="albumdivleft">
                                         <img alt="album thumb" src={album_pic_large} />
-                                    </div>
-                                    <div className="albumdivright">
+                                    </motion.div>
+                                    <motion.div whileTap={{ scale: 0.95}} className="albumdivright">
                                         <img alt="album thumb" src={album_pic_large} />
-                                    </div>
+                                    </motion.div>
                                 </div>
                             </div>
                             <div>
                                 <p className="large">Popular Playlist</p>
                                 <div className="sidebysidealbums">
-                                    <div className="albumdivleft">
+                                    <motion.div whileTap={{ scale: 0.95}} className="albumdivleft">
                                         <img alt="album thumb" src={album_pic_large} />
-                                    </div>
-                                    <div className="albumdivright">
+                                    </motion.div>
+                                    <motion.div whileTap={{ scale: 0.95}} className="albumdivright">
                                         <img alt="album thumb" src={album_pic_large} />
-                                    </div>
+                                    </motion.div>
                                 </div>
                             </div>
                         </div>

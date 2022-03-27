@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Options } from "./modals/Options";
 import { Share } from "./modals/Share";
+import { motion } from "framer-motion";
 
 import Swipe from "./Swipe";
 
@@ -77,9 +78,15 @@ export const Discover = () => {
                         <p className="discover_artist">{artists[index]}</p>
                     </div>
                     <div className="discover_buttons">
-                        <img alt="discover icon" src={heart} />
-                        <img alt="discover icon" src={share} onClick={() => share_modal()} />
-                        <img className="discover icon" alt="ellispse" src={three_dots} onClick={() => options_modal()} />
+                        <motion.div whileTap={{ scale: 0.6 }} >
+                            <img alt="discover icon" src={heart} />
+                        </motion.div>
+                        <motion.div whileTap={{ scale: 0.6 }} >
+                            <img alt="discover icon" src={share} onClick={() => share_modal()} />
+                        </motion.div>
+                        <motion.div whileTap={{ scale: 0.6 }} >
+                            <img className="discover icon" alt="ellispse" src={three_dots} onClick={() => options_modal()} />
+                        </motion.div>
                     </div>
                 </div>
             </div>

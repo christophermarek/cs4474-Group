@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 export const Options = ({album_picture, song_name, song_info, setCurrModal}) => {
     
@@ -20,10 +21,10 @@ export const Options = ({album_picture, song_name, song_info, setCurrModal}) => 
             </div>
             <div className="options_sel">
                 {options_select.map((option) => 
-                    <div className="option">
+                    <motion.div whileTap={{ scale: 0.99 }} className="option">
                         <img src={option.icon} alt='icon' />
                         <p>{option.text}</p>
-                    </div>
+                    </motion.div>
                 )}
             </div>
 

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const share_select = [
     { icon: require('../../assets/heart.svg').default, text: 'Hugh Campbell' },
@@ -38,10 +39,10 @@ const ShareButtons = () => {
     return (
         <>
             {share_buttons.map((item) =>
-                <div className="button_container">
+                <motion.div whileTap={{ scale: 0.8 }} className="button_container">
                     <img src={item.icon} />
                     <p>{item.text}</p>
-                </div>
+                </motion.div>
             )}
 
         </>
@@ -69,8 +70,12 @@ export const Share = ({ album_picture, song_name, song_info, setCurrModal }) => 
             <div className="share_buttons">
                 <ShareButtons />
             </div>
-            <input type='button' value="Share" className="sharebutton" />
-            <p id='options_close' onClick={() => setCurrModal('')}>Close</p>
+            <motion.div whileTap={{ scale: 0.99 }}>
+                <input type='button' value="Share" className="sharebutton" />
+            </motion.div>
+            <motion.div whileTap={{ scale: 0.99 }}>
+                <p id='options_close' onClick={() => setCurrModal('')}>Close</p>
+            </motion.div>
         </div>
     );
 };

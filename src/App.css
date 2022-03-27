@@ -189,10 +189,11 @@ html {
 .top-icons {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 #top img {
-    width: 15%;
+    width: 85%;
 }
 
 .rec_played_text {
@@ -275,7 +276,7 @@ html {
 
 .discover_buttons {
     position: absolute;
-    width: 8%;
+    width: 10%;
     z-index: 10;
     right: 5%;
     bottom: 5%;
