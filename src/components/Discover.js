@@ -94,19 +94,18 @@ export const Discover = ({ currModal, setCurrModal }) => {
           </div>
           <div className="discover_buttons">
             <Heart />
-            <motion.div whileTap={{ scale: 0.6 }}>
+            <motion.div whileTap={{ scale: 0.6 }} onClick={() => share_modal()}>
               <img
                 alt="discover icon"
                 src={share}
-                onClick={() => share_modal()}
               />
             </motion.div>
-            <motion.div whileTap={{ scale: 0.6 }}>
+            <motion.div whileTap={{ scale: 0.6 }} onClick={() => options_modal()}>
               <img
                 className="discover icon"
                 alt="ellispse"
                 src={three_dots}
-                onClick={() => options_modal()}
+                
               />
             </motion.div>
           </div>

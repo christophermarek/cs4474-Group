@@ -215,12 +215,11 @@ export const Library = ({ currModal, setCurrModal }) => {
 
               <div className="likes-icons">
                 <Heart active className={"icon-heart"} />
-                <motion.div whileTap={{ scale: 0.8 }} className="likes-icon">
+                <motion.div whileTap={{ scale: 0.8 }} className="likes-icon" onClick={() => options_modal(item)}>
                   <img
                     className="icon-dots"
                     alt="ellispse"
                     src={three_dots}
-                    onClick={() => options_modal(item)}
                   />
                 </motion.div>
               </div>
