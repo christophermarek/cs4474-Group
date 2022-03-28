@@ -93,7 +93,7 @@ export const Share = ({
           <p>{song_info}</p>
         </div>
       </div>
-      <div className="options_sel">
+      <div className="options_sel share_sel">
         {share_select.map((option, index) => (
           <Select pic={option.icon} name={option.text} />
         ))}
