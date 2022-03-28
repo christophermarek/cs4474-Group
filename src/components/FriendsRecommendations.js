@@ -108,52 +108,52 @@ export const FriendsRecomendations = ({ currModal, setCurrModal, setFriendsRecco
                     <Options setCurrModal={setCurrModal} album_picture={selSongInfo.pic} song_name={selSongInfo.name} song_info={selSongInfo.info} />
                 </>
             }
-            <div className={"recommendations "  + (currModal!== '' ? 'blur' : '')} >
+            <div className={"recommendations " + (currModal !== '' ? 'blur' : '')} >
                 <div id="background"></div>
 
 
                 <div className={"friend-header lib-greeting "}>
                     <motion.div onClick={() => setFriendsReccomendations(false)} whileTap={{ scale: 0.9 }} >
-                            <svg
-                                width="11px"
-                                height="20px"
-                                viewBox="0 0 11 20"
-                                version="1.1"
-                                xmlns="http://www.w3.org/2000/svg"
+                        <svg
+                            width="11px"
+                            height="20px"
+                            viewBox="0 0 11 20"
+                            version="1.1"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <g
+                                id="Icons"
+                                stroke="none"
+                                stroke-width="1"
+                                fill="none"
+                                fill-rule="evenodd"
                             >
-                                <g
-                                    id="Icons"
-                                    stroke="none"
-                                    stroke-width="1"
-                                    fill="none"
-                                    fill-rule="evenodd"
-                                >
-                                    <g id="Rounded" transform="translate(-548.000000, -3434.000000)">
+                                <g id="Rounded" transform="translate(-548.000000, -3434.000000)">
+                                    <g
+                                        id="Navigation"
+                                        transform="translate(100.000000, 3378.000000)"
+                                    >
                                         <g
-                                            id="Navigation"
-                                            transform="translate(100.000000, 3378.000000)"
+                                            id="-Round-/-Navigation-/-arrow_back_ios"
+                                            transform="translate(442.000000, 54.000000)"
                                         >
-                                            <g
-                                                id="-Round-/-Navigation-/-arrow_back_ios"
-                                                transform="translate(442.000000, 54.000000)"
-                                            >
-                                                <g>
-                                                    <polygon
-                                                        id="Path"
-                                                        opacity="0.87"
-                                                        points="0 0 24 0 24 24 0 24"
-                                                    ></polygon>
-                                                    <path
-                                                        d="M16.62,2.99 C16.13,2.5 15.34,2.5 14.85,2.99 L6.54,11.3 C6.15,11.69 6.15,12.32 6.54,12.71 L14.85,21.02 C15.34,21.51 16.13,21.51 16.62,21.02 C17.11,20.53 17.11,19.74 16.62,19.25 L9.38,12 L16.63,4.75 C17.11,4.27 17.11,3.47 16.62,2.99 Z"
-                                                        id="🔹-Icon-Color"
-                                                        fill="#ffffff"
-                                                    ></path>
-                                                </g>
+                                            <g>
+                                                <polygon
+                                                    id="Path"
+                                                    opacity="0.87"
+                                                    points="0 0 24 0 24 24 0 24"
+                                                ></polygon>
+                                                <path
+                                                    d="M16.62,2.99 C16.13,2.5 15.34,2.5 14.85,2.99 L6.54,11.3 C6.15,11.69 6.15,12.32 6.54,12.71 L14.85,21.02 C15.34,21.51 16.13,21.51 16.62,21.02 C17.11,20.53 17.11,19.74 16.62,19.25 L9.38,12 L16.63,4.75 C17.11,4.27 17.11,3.47 16.62,2.99 Z"
+                                                    id="🔹-Icon-Color"
+                                                    fill="#ffffff"
+                                                ></path>
                                             </g>
                                         </g>
                                     </g>
                                 </g>
-                            </svg>
+                            </g>
+                        </svg>
                     </motion.div>
 
                     <p>Friend's Recommendations</p>
@@ -200,22 +200,24 @@ export const FriendsRecomendations = ({ currModal, setCurrModal, setFriendsRecco
                                         <p>Recomended:</p>
                                         {reccomended.map((rec, index) => (
                                             <div className="reccomended_item">
-                                                <div className="recommend-thumb">
-                                                    <img alt="album thumb" src={rec.picture} />
-                                                </div>
-                                                <div className="recommend-body">
-                                                    <div>
-                                                        <p className="friend-artist song-title">
-                                                            {rec.title}
-                                                        </p>
-                                                        <p className="friend-artist song-artist">
-                                                            {rec.description}
-                                                        </p>
+                                                <div className="rec_container">
+                                                    <div className="recommend-thumb">
+                                                        <img alt="album thumb" src={rec.picture} />
                                                     </div>
-                                                    <motion.div whileTap={{ scale: 0.8 }} className="options_btn" onClick={() => options_modal(rec)}>
-                                                        <img className="icon-dots" alt="ellispse" src={three_dots} />
-                                                    </motion.div>
+                                                    <div className="recommend-body">
+                                                        <div>
+                                                            <p className="friend-artist song-title">
+                                                                {rec.title}
+                                                            </p>
+                                                            <p className="friend-artist song-artist">
+                                                                {rec.description}
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
+                                                <motion.div whileTap={{ scale: 0.8 }} className="options_btn" onClick={() => options_modal(rec)}>
+                                                    <img className="icon-dots" alt="ellispse" src={three_dots} />
+                                                </motion.div>
                                             </div>
                                         ))}
                                     </>

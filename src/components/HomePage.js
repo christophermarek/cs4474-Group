@@ -6,16 +6,19 @@ export const HomePage = ({ currModal, setCurrModal }) => {
     const [friendsReccomendations, setFriendsReccomendations] = useState(false);
 
     //import images
-    const chill_vibes = require("../assets/chill_vibes.png");
+    const chill_vibes = require("../assets/plalists/chill_vibes.png");
     const album_pic_large = require("../assets/album_pic_large.png");
+    const album_pic_1 = require("../assets/album1.png");
+    const album_pic_2 = require("../assets/album2.png");
+    const album_pic_3 = require("../assets/album3.png");
 
     const recently_played = [
         { name: "Chill Vibes", src: chill_vibes },
-        { name: "Running from demons", src: chill_vibes },
-        { name: "Fance in Pillow", src: chill_vibes },
-        { name: "Welcome to Chillies", src: chill_vibes },
-        { name: "Dubstep Yo Mama", src: chill_vibes },
-        { name: "I miss her (not)", src: chill_vibes },
+        { name: "Running from demons", src: require('../assets/plalists/lisa.png') },
+        { name: "Fance in Pillow", src: require('../assets/plalists/face.png') },
+        { name: "Welcome to Chillies", src: require('../assets/plalists/chillies.png') },
+        { name: "Dubstep Yo Mama", src: require('../assets/plalists/dubstep.png') },
+        { name: "I miss her (not)", src: require('../assets/plalists/her.png') },
     ];
 
     const rec_played = require("../assets/rec_viewed.svg").default;
@@ -91,7 +94,7 @@ export const HomePage = ({ currModal, setCurrModal }) => {
                                         <img alt="album thumb" src={album_pic_large} />
                                     </motion.div>
                                     <motion.div whileTap={{ scale: 0.95 }} className="albumdivright">
-                                        <img alt="album thumb" src={album_pic_large} />
+                                        <img alt="album thumb" src={album_pic_3} />
                                     </motion.div>
                                 </div>
                             </div>
@@ -99,10 +102,10 @@ export const HomePage = ({ currModal, setCurrModal }) => {
                                 <p className="large">Popular Playlist</p>
                                 <div className="sidebysidealbums">
                                     <motion.div whileTap={{ scale: 0.95 }} className="albumdivleft">
-                                        <img alt="album thumb" src={album_pic_large} />
+                                        <img alt="album thumb" src={album_pic_2} />
                                     </motion.div>
                                     <motion.div whileTap={{ scale: 0.95 }} className="albumdivright">
-                                        <img alt="album thumb" src={album_pic_large} />
+                                        <img alt="album thumb" src={album_pic_1} />
                                     </motion.div>
                                 </div>
                             </div>

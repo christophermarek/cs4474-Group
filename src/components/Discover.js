@@ -56,7 +56,6 @@ export const Discover = ({currModal, setCurrModal}) => {
 
     const getActiveIndex = (index) => {
         setIndex(index);
-        console.log(index);
     };
 
     return (

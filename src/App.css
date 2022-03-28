@@ -199,9 +199,9 @@ html {
 .rec_played_text {
     margin-left: 5%;
     margin-right: 5%;
-    font-size: 14px;
+    font-size: 0.8em;
     font-family: "Rubik", sans-serif;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .lib_header {
@@ -537,8 +537,11 @@ html {
 
 .reccomended_item {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 10px;
+}
+.rec_container{
+    display: flex;
 }
 
 .recommend-thumb {
