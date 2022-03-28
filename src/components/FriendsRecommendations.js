@@ -248,7 +248,12 @@ export const FriendsRecomendations = ({
                   </svg>
                 </div>
               </div>
-              <div className="friendRecs">
+              <div
+                className={
+                  "friendRecs" +
+                  (friends[index].expanded ? " selectedFriend" : "")
+                }
+              >
                 {friends[index].expanded && (
                   <>
                     <p>Recomended:</p>

@@ -680,7 +680,12 @@ html {
 }
 
 .friendRecs {
-  padding: 0 5% 5% 5%;
+  padding: 0.5% 5% 0.5% 5%;
+  margin: 0 0 5% 0;
+}
+
+.selectedFriend {
+  background-color: #535353;
 }
 
 .center {
