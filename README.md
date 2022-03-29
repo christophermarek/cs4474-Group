@@ -1,5 +1,4 @@
 
 CS4474 Group Project
 
-Members:
-- Christopher Marek
+to run
